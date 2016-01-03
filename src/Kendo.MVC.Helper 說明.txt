@@ -1,0 +1,10 @@
+Store Procedure Bridge 使用方式及限制：
+1. 需 ProcedureBridge + ProcedureRepositoryBase 搭配組合使用。
+2. 資料庫欄位名稱與 Entity Class 屬性名稱需相同不可修改（因為會影響 where 及 OrderBy 查詢）。
+3. 每一個 Entity Class需準備一組 Store Procedure（Insert, Update, Delete, Select），供 Library使用。
+4. 另外需準備一支 SelectTotal Store Procedure（查詢未分頁之結果總數），供所有 Entity Class使用。
+5. 每個關連（單向）需準備一支 Store Procedure。
+6. Entity Class不可使用繼承關係。
+7. 
+
+
